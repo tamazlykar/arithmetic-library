@@ -1,16 +1,15 @@
 var asmd = (function() {
-    function asmd() {
+  function asmd() {
 
+  }
+
+  function add() {
+    console.log("this is add");
+  }
+
+  return {
+    hw: function() {
+      console.log("Hello world");
     }
-
-    function add() {
-        console.log("this is add");
-    }
-
-    return {
-        hw: function() {
-            console.log("Hello world");
-        }
-    }
-
+  }
 }());
