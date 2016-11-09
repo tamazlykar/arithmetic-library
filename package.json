@@ -1,0 +1,15 @@
+{
+  "name": "arithmetic-library",
+  "version": "1.0.0",
+  "description": "Simple arithmetic library for working with big numbers",
+  "main": "arithmetic-library.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/tamazlykar/arithmetic-library.git"
+  },
+  "author": "Tamazlykar Daniil <tamazlykar_dv@bw-sw.com>",
+  "license": "ISC"
+}
