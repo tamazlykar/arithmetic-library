@@ -1,9 +1,27 @@
 'use strict';
 
-//TODO: check if all string is numeric
+// TODO: check if all string is numeric
+// Can't add .vscode to gitignore
 
 (function(exports) {
   exports.add = function(a, b) {
+    let isNegativeA = false;
+    let isNegativeB = false;
+
+    if (a[0] == '-') {
+      isNegativeA = true;
+      a = a.slice(1);
+    } else if (a[0] == '+') {
+      a = a.slice(1);
+    }
+
+    if (b[0] == '-') {
+      isNegativeB = true;
+      b = b.slice(1);
+    } else if (b[0] == '+') {
+      b = b.slice(1);
+    }
+
     if (a.length < b.length) {
       // node don't support this constructon [a,b]=[b,a]
       b = [a, a = b][0];
