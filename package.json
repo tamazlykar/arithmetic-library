@@ -4,7 +4,7 @@
   "description": "Simple arithmetic library for working with big numbers",
   "main": "arithmetic-library.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "lint": "eslint arithmetic-library.js"
   },
   "repository": {
@@ -14,10 +14,13 @@
   "author": "Tamazlykar Daniil <tamazlykar_dv@bw-sw.com>",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^3.5.0",
     "eslint": "^3.9.1",
     "eslint-config-google": "^0.7.0",
     "karma": "^1.3.0",
     "karma-chrome-launcher": "^2.0.0",
-    "karma-jasmine": "^1.0.2"
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "mocha": "^3.1.2"
   }
 }

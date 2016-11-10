@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-var asmd = (function() {
+let asmd = (function() {
   function asmd() {
 
   }
@@ -9,20 +9,20 @@ var asmd = (function() {
 
     let maxLength = Math.max(a.length, b.length);
 
-    let result = []
+    let result = [];
 
-    let memory
-    for (let i = maxLength-1, let j = ; i >= 0; i--) {
-      let sum = a
-      result.push()
+    let memory;
+    for (let i = maxLength-1, j = 2; i >= 0; i--) {
+      let sum = a;
+      result.push();
     }
   }
 
   return {
-    hw: function() {
-      console.log("Hello world");
-    }
-  }
+    add: function() {
+      return 1;
+    },
+  };
 }());
 
-//TODO JsDOC
+// TODO JsDOC
