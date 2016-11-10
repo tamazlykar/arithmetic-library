@@ -6,13 +6,15 @@ let asmd = (function() {
   }
 
   function add(a, b) {
+    if (a.length < b.length) {
+      [a, b] = [b, a];
+    }
 
-    let maxLength = Math.max(a.length, b.length);
 
     let result = [];
 
     let memory;
-    for (let i = maxLength-1, j = 2; i >= 0; i--) {
+    for (let ai = a.length, bi = b.length; bi >= 0; ai--, bi--) {
       let sum = a;
       result.push();
     }
