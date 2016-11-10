@@ -1,4 +1,12 @@
 # dependencies
 /node_modules
-/.vscode
+
+#vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+#other
 npm-debug.log
+tst.js
