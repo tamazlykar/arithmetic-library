@@ -1,7 +1,6 @@
 'use strict';
 
-// TODO: check if all string is numeric
-// trim
+// TODO: trim
 // Can't add .vscode to gitignore
 
 (function(exports) {
@@ -12,23 +11,6 @@
    * @return {string} Sum of a and b
    */
   function _add(a, b) {
-    let isNegativeA = false;
-    let isNegativeB = false;
-
-    if (a[0] == '-') {
-      isNegativeA = true;
-      a = a.slice(1);
-    } else if (a[0] == '+') {
-      a = a.slice(1);
-    }
-
-    if (b[0] == '-') {
-      isNegativeB = true;
-      b = b.slice(1);
-    } else if (b[0] == '+') {
-      b = b.slice(1);
-    }
-
     if (a.length < b.length) {
       // node don't support this constructon [a,b]=[b,a]
       b = [a, a = b][0];
@@ -82,14 +64,6 @@
    * @return {string} difference
    */
   function _subtract(a, b) {
-    // from another part of code
-    if (a.length < b.length) {
-      // node don't support this constructon [a,b]=[b,a]
-      b = [a, a = b][0];
-    } else if (a.length == b.length && +a[0] < +b[0]) {
-      b = [a, a = b][0];
-    }
-
     let aNum = [];
     for (let i = 0; i < a.length; i++) {
       aNum.push(+a[i]);
@@ -133,6 +107,44 @@
     }
 
     return result;
+  }
+
+  /**
+   * Multiplication of a and b
+   * @param {string} a
+   * @param {string} b
+   * @return {string} myltiplication
+   */
+  function _multiply(a, b) {
+    if (a.length < b.length) {
+      // node don't support this constructon [a,b]=[b,a]
+      b = [a, a = b][0];
+    }
+
+    let aArr = createArrayFormString(a);
+    let bArr = createArrayFormString(b);
+
+    let ai;
+    let bi;
+    for (ai = aArr.length-1, bi = bArr.length-1; bi >= 0; ai--, bi--) {
+
+    }
+
+  }
+
+  /**
+   * Create array from number string
+   * @param {string} str
+   * @return {Array<number>} array of numbers from string
+   */
+  function createArrayFormString(str) {
+    let arr = [];
+
+    for (let i = 0; i < str.length; i++) {
+      arr.push(+str[i]);
+    }
+
+    return arr;
   }
 
   /**
