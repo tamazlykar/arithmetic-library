@@ -16,7 +16,7 @@ describe('Arithmetic Library (asmd)', function() {
   });
 
   describe('Function add', function() {
-    describe('Not long numbers', function() {
+    describe('Short numbers', function() {
       it('add 0 to 5 equal 20', function() {
         assert.equal(asmd.add('0', '5'), '5');
       });
@@ -54,5 +54,56 @@ describe('Arithmetic Library (asmd)', function() {
         assert.equal(asmd.add('959269', '936843684684136846143841618368413861368168866814'), '936843684684136846143841618368413861368169826083');
       });
     });
+    describe('Signed numbers', function() {
+      it('add -15 to 5 equal -10', function() {
+        assert.equal(asmd.add('-15', '5'), '-10');
+      });
+
+      it('add -5 to 15 equal 10', function() {
+        assert.equal(asmd.add('-5', '15'), '10');
+      });
+
+      it('add 8 to -11 equal -3', function() {
+        assert.equal(asmd.add('8', '-11'), '-3');
+      });
+
+      it('add -15 to -5 equal -20', function() {
+        assert.equal(asmd.add('-15', '-5'), '-20');
+      });
+    });
+  });
+
+  describe('Function subtract', function() {
+    describe('Short numers', function() {
+      it('subtract 5 from 10 equal 5', function() {
+        assert.equal(asmd.subtract('10', '5'), '5');
+      });
+
+      it('subtract 14 from 123 equal 109', function() {
+        assert.equal(asmd.subtract('123', '14'), '109');
+      });
+
+      it('subtract 12 from 100000 equal 99988', function() {
+        assert.equal(asmd.subtract('100000', '12'), '99988');
+      });
+
+      it('subtract 987654321 from 123456789 equal 864197532', function() {
+        assert.equal(asmd.subtract('987654321', '123456789'), '864197532');
+      });
+      it('subtract 123456789 from 0 equal 123456789', function() {
+        assert.equal(asmd.subtract('123456789', '0'), '123456789');
+      });
+    });
+    describe('Long numers', function() {
+      it('subtract 48841684844364864643254 from 446468561515684684681681688165465846 equal 446468561515635842996837323300822592', function() {
+        assert.equal(asmd.subtract('446468561515684684681681688165465846', '48841684844364864643254'), '446468561515635842996837323300822592');
+      });
+    });
   });
 });
+
+/*
+446468561515684684681681688165465846
+000000000000048841684844364864643254
+446468561515635842996837323300822592
+*/
