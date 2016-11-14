@@ -123,13 +123,22 @@
 
     let aArr = createArrayFormString(a);
     let bArr = createArrayFormString(b);
+  }
 
-    let ai;
-    let bi;
-    for (ai = aArr.length-1, bi = bArr.length-1; bi >= 0; ai--, bi--) {
+  function karatsuba(x, y) {
+    // if len = 1
+    let n = Math.max(x.length, y.length);
 
-    }
+    let a = x.slice(0, n/2);
+    let b = x.slice(n/2);
+    let c = y.slice(0, n/2);
+    let d = y/slice(n/2);
 
+    let ac = karatsuba(a, c);
+    let bd = karatsuba(b, d);
+    let abcd = karatsuba(a+b, c+d) // (a+b)(c+d)
+
+    return ac * Math.pow(10, n) (adbd - ac - bd) * Math.pow(10, n/2) + bd;
   }
 
   /**
