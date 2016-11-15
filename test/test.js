@@ -100,6 +100,62 @@ describe('Arithmetic Library (asmd)', function() {
       });
     });
   });
+  describe('Function multiply', function() {
+    describe('Short numers', function() {
+      it('multiply 5 from 3 equal 15', function() {
+        assert.equal(asmd.multiply('5', '3'), '15');
+      });
+
+      it('multiply 10 from 10 equal 100', function() {
+        assert.equal(asmd.multiply('10', '10'), '100');
+      });
+
+      it('multiply 11 from 11 equal 121', function() {
+        assert.equal(asmd.multiply('11', '11'), '121');
+      });
+
+      it('multiply 5125 from 3465 equal 17758125', function() {
+        assert.equal(asmd.multiply('5125', '3465'), '17758125');
+      });
+
+      it('multiply 0 from 1 equal 0', function() {
+        assert.equal(asmd.multiply('0', '1'), '0');
+      });
+
+      it('multiply 2 from 12 equal 24', function() {
+        assert.equal(asmd.multiply('2', '12'), '24');
+      });
+
+      it('multiply 345 from 436 equal 150420', function() {
+        assert.equal(asmd.multiply('345', '436'), '150420');
+      });
+
+      it('multiply 586 from 9845 equal 5769170', function() {
+        assert.equal(asmd.multiply('586', '9845'), '5769170');
+      });
+
+      it('multiply 99 from 99 equal 891', function() {
+        assert.equal(asmd.multiply('99', '99'), '9801');
+      });
+
+      it('multiply 999 from 9999 equal 9989001', function() {
+        assert.equal(asmd.multiply('999', '9999'), '9989001');
+      });
+
+      it('multiply 108 from 198 equal 21384', function() {
+        assert.equal(asmd.multiply('108', '198'), '21384');
+      });
+
+      it('multiply 98435126 from 5952653 equal 585950148089278', function() {
+        assert.equal(asmd.multiply('98435126', '5952653'), '585950148089278');
+      });
+    });
+    describe('Long numers', function() {
+      it('multiply 4684864846484612862525 from 99968496874968464986969 equal 468338896765446638408932901028214283913436725', function() {
+        assert.equal(asmd.multiply('4684864846484612862525', '99968496874968464986969'), '468338896765446638408932901028214283913436725');
+      });
+    });
+  });
 });
 
 /*
